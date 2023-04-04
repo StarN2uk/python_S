@@ -1,0 +1,5 @@
+f = open("fruit.txt", "r")
+data = f.readlines()
+print(data[5])
+print(data[7])
+f.close()
