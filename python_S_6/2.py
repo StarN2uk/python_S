@@ -1,0 +1,13 @@
+from PIL import Image
+size = (128, 128)
+Taki_img = Image.open("Taki.jpg")
+Taki_rotated = Taki_img.rotate(90)
+Taki_converted = Taki_img.convert('L')
+Taki_transpose = Taki_img.transpose(Image.FLIP_LEFT_RIGHT)
+Taki_img.thumbnail(size)
+print("Taki_converted.mode =", Taki_converted.mode)
+print("Taki_img.size =", Taki_img.size)
+Taki_converted.show()
+Taki_transpose.show()
+Taki_rotated.save("Taki_rotated.jpg")
+Taki_img.save("Taki_thumb.jpg")

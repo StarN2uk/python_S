@@ -1,0 +1,12 @@
+from PIL import Image
+area = (230, 155, 1110, 770)
+size = (640, 200)
+Taki_img = Image.open("Taki.jpg")
+Powo_img = Image.open("Powo.jpg")
+print(Taki_img.size, Taki_img.format, Taki_img.mode)
+print(Powo_img.size, Powo_img.format, Powo_img.mode)
+Powo_resz = Powo_img.resize(size)
+Taki_cropped = Taki_img.crop(area)
+Taki_img.show()
+Taki_cropped.save("Taki_cropped.jpg")
+Powo_resz.save("Powo_resized.jpg")
